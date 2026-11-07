@@ -59,7 +59,7 @@ Stake native ETH and earn **OrcaCoin (ORCA)**, an ERC-20 token that is **minted 
 | Language | Solidity `0.8.24` (EVM `cancun`) |
 | Framework | Foundry (forge, anvil, cast) |
 | Libraries | OpenZeppelin Contracts `5.x` (ERC20, Ownable, ReentrancyGuard) |
-| Testing | forge-std (unit, fuzz, time travel with `skip`) |
+| Testing | forge-std v1.9.7, vendored in `lib/` (unit, fuzz, time travel with `skip`) |
 | Package manager | pnpm |
 
 ## Project layout
@@ -72,6 +72,7 @@ test/Staking.t.sol          staking, rewards, reentrancy and fuzz tests
 script/Deploy.s.sol         deploys both contracts and wires them together
 foundry.toml                compiler config
 remappings.txt              import aliases (OpenZeppelin, forge-std)
+lib/forge-std/              vendored forge-std test library
 ```
 
 ## Getting started
@@ -79,7 +80,7 @@ remappings.txt              import aliases (OpenZeppelin, forge-std)
 Prerequisites: [Foundry](https://book.getfoundry.sh/getting-started/installation) and [pnpm](https://pnpm.io/installation).
 
 ```bash
-pnpm install        # installs OpenZeppelin + forge-std into node_modules
+pnpm install        # installs OpenZeppelin into node_modules (forge-std is vendored in lib/)
 pnpm build
 pnpm test
 ```

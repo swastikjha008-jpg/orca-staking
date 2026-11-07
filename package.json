@@ -15,8 +15,7 @@
     "deploy:sepolia": "forge script script/Deploy.s.sol:Deploy --rpc-url sepolia --broadcast --verify"
   },
   "devDependencies": {
-    "@openzeppelin/contracts": "^5.0.2",
-    "forge-std": "github:foundry-rs/forge-std#v1.9.7"
+    "@openzeppelin/contracts": "^5.0.2"
   },
   "packageManager": "pnpm@10.28.0"
 }
