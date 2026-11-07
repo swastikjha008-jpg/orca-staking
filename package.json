@@ -1,0 +1,22 @@
+{
+  "name": "orca-staking",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stake ETH, earn minted OrcaCoin (ERC-20). Foundry + pnpm.",
+  "license": "MIT",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test -vv",
+    "test:gas": "forge test --gas-report",
+    "coverage": "forge coverage",
+    "fmt": "forge fmt",
+    "anvil": "anvil",
+    "deploy:local": "forge script script/Deploy.s.sol:Deploy --rpc-url local --broadcast",
+    "deploy:sepolia": "forge script script/Deploy.s.sol:Deploy --rpc-url sepolia --broadcast --verify"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.7"
+  },
+  "packageManager": "pnpm@10.28.0"
+}
